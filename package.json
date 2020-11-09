@@ -1,0 +1,39 @@
+{
+  "name": "xrd-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Alexander Wormbs <alexander@radixdlt.com>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "truffle compile",
+    "migrate:dev": "truffle migrate --f 1 --to 3 --reset --network dev",
+    "migrate:rinkeby:token": "truffle migrate --f 4 --to 4 --network rinkeby --reset",
+    "migrate:rinkeby:vault": "truffle migrate --f 5 --to 5 --network rinkeby --reset",
+    "migrate:main:token": "truffle migrate --f 4 --to 4 --network mainnet --reset",
+    "migrate:main:vault": "truffle migrate --f 5 --to 5 --network mainnet --reset",
+    "test": "buidler test --network buidlerevm",
+    "addAllocationTx:json": "node scripts/addAllocationsFromJson.js",
+    "addAllocationTx:excel": "node scripts/addAllocationsFromExcel.js",
+    "contractAddress": "node scripts/calculateContractAddress.js"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.1.0",
+    "@truffle/hdwallet-provider": "^1.1.0",
+    "bignumber.js": "^9.0.0",
+    "keccak": "^3.0.1",
+    "openzeppelin-solidity": "2.5.0",
+    "read-excel-file": "^4.0.7",
+    "rlp": "^2.2.6",
+    "truffle": "^5.1.37",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "web3": "^1.3.0",
+    "web3-eth-contract": "^1.3.0"
+  },
+  "devDependencies": {
+    "@nomiclabs/buidler": "^1.4.3",
+    "@nomiclabs/buidler-truffle5": "^1.3.4",
+    "@nomiclabs/buidler-web3": "^1.3.4",
+    "buidler-gas-reporter": "^0.1.3",
+    "ganache-cli": "^6.10.1"
+  }
+}
