@@ -7,6 +7,7 @@
   "scripts": {
     "compile": "truffle compile",
     "migrate:dev": "truffle migrate --f 1 --to 3 --reset --network dev",
+    "migrate:goerli:token": "truffle migrate --f 2 --to 2 --network goerli --reset",
     "migrate:rinkeby:token": "truffle migrate --f 4 --to 4 --network rinkeby --reset",
     "migrate:rinkeby:vault": "truffle migrate --f 5 --to 5 --network rinkeby --reset",
     "migrate:main:token": "truffle migrate --f 4 --to 4 --network mainnet --reset",

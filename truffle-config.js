@@ -1,5 +1,8 @@
 const HDWalletProvider = require("@truffle/hdwallet-provider")
 
+const mnemonic = "";
+const apiKey = "";
+
 module.exports = {
   networks: {
     dev: {
@@ -8,13 +11,13 @@ module.exports = {
       network_id: "*",
       gas: 8500000
     },
-    rinkeby: {
-      provider: function () {
-        return new HDWalletProvider(mnemonic, "");
+    goerli: {
+      provider: () => {
+        return new HDWalletProvider(mnemonic, 'https://goerli.infura.io/v3/' + apiKey)
       },
-      network_id: 4,
-      gas: 7000000,
-      gasPrice: 100000000000,
+      network_id: 5, 
+      gas: 4465030,
+      gasPrice: 10000000000,
       skipDryRun: true,
       timeoutBlocks: 100
     },
